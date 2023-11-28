@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 $purple : #7336fe;
+$oxygen-font : "Roboto", sans-serif;
 
 * {
 	margin: 0;
@@ -23,7 +26,7 @@ $purple : #7336fe;
 
 	.web-logo {
 		text-align: center;
-		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		font-family: $oxygen-font;
 		font-size: 20px;
 	}
 
@@ -44,29 +47,31 @@ $purple : #7336fe;
 				width: 100%;
 				padding: 15px;
 				font-size: 20px;
+				font-family: $oxygen-font;
 				outline: none;
 				border-radius: 4px;
-
+				
 				&:focus, &:valid{
 					border: 2px solid $purple;
 				}
-
+				
 				&:focus+label, &:valid+label{
 					background-color: white;
 					border: 2px solid $purple;
 					transform: translateY(-40px);
 				}
 			}
-	
+			
 			label {
 				padding: 0 8px;
 				font-size: 30px;
+				font-family: $oxygen-font;
 				position: absolute;
 				left: 10px;
 				top: 25%;
 				pointer-events: none;
 				transition: 0.4s, border 0.1s ease-in-out,
-									background-color 0.1s;
+									background-color 0.3s;
 			}
 		}
 
@@ -77,12 +82,14 @@ $purple : #7336fe;
 		justify-content: center;
 
 		button {
-			padding: 15px 40px;
+			padding: 15px 60px;
 			font-size: 20px;
+			color: white;
 			border: none;
 			position: relative;
-			border-radius: 55%;
-
+			border-radius: 18% / 50%;
+			background-color: $purple;
+			box-shadow: 0 5px 10px rgba(black, 0.3);
 		}
 	}
 
