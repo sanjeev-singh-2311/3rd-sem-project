@@ -1,3 +1,5 @@
+$purple : #7336fe;
+
 * {
 	margin: 0;
 	padding: 0;
@@ -6,12 +8,12 @@
 .login-wrapper {
 	background-color: lightblue;
 
-	height: 300px;
-	width: 300px;
+	position: fixed;
+	right: 80px;
+	top: 80px;
+	bottom: 80px;
 
-	position: relative;
-	top: 150px;
-	left: 50%;
+	width: 40vw;
 
 	box-sizing: border-box;
 
@@ -26,32 +28,62 @@
 	}
 
 	.login-form {
+		width: 80%;
 		display: flex;
 		flex-direction: column;
 		row-gap: 50px;
+		// background-color: lightpink;
+
+		position: relative;
+		top: 20%;
+		left: 5%;
 
 		.user-name, .user-pass {
 			position: relative;
 			input {
-				padding: 5px;
+				width: 100%;
+				padding: 15px;
 				font-size: 20px;
 				outline: none;
+				border-radius: 4px;
+
+				&:focus, &:valid{
+					border: 2px solid $purple;
+				}
 
 				&:focus+label, &:valid+label{
-					transform: translateY(-30px);
+					background-color: white;
+					border: 2px solid $purple;
+					transform: translateY(-40px);
 				}
 			}
 	
 			label {
-				font-size: 20px;
+				padding: 0 8px;
+				font-size: 30px;
 				position: absolute;
-				left: 0;
-				top: 5px;
+				left: 10px;
+				top: 25%;
 				pointer-events: none;
-				transition: 0.4s;
+				transition: 0.4s, border 0.1s ease-in-out,
+									background-color 0.1s;
 			}
 		}
 
+	}
+
+	.submit-btn {
+		display: flex;
+		justify-content: center;
+
+		button {
+			padding: 15px 40px;
+			font-size: 20px;
+			border: none;
+			position: relative;
+			border-radius: 55%;
+
+		}
 	}
 
 }

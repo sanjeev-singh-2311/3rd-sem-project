@@ -5,11 +5,11 @@
 
 .login-wrapper {
   background-color: lightblue;
-  height: 300px;
-  width: 300px;
-  position: relative;
-  top: 150px;
-  left: 50%;
+  position: fixed;
+  right: 80px;
+  top: 80px;
+  bottom: 80px;
+  width: 40vw;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -21,26 +21,49 @@
   font-size: 20px;
 }
 .login-wrapper .login-form {
+  width: 80%;
   display: flex;
   flex-direction: column;
   row-gap: 50px;
+  position: relative;
+  top: 20%;
+  left: 5%;
 }
 .login-wrapper .login-form .user-name, .login-wrapper .login-form .user-pass {
   position: relative;
 }
 .login-wrapper .login-form .user-name input, .login-wrapper .login-form .user-pass input {
-  padding: 5px;
+  width: 100%;
+  padding: 15px;
   font-size: 20px;
   outline: none;
+  border-radius: 4px;
+}
+.login-wrapper .login-form .user-name input:focus, .login-wrapper .login-form .user-name input:valid, .login-wrapper .login-form .user-pass input:focus, .login-wrapper .login-form .user-pass input:valid {
+  border: 2px solid #7336fe;
 }
 .login-wrapper .login-form .user-name input:focus + label, .login-wrapper .login-form .user-name input:valid + label, .login-wrapper .login-form .user-pass input:focus + label, .login-wrapper .login-form .user-pass input:valid + label {
-  transform: translateY(-30px);
+  background-color: white;
+  border: 2px solid #7336fe;
+  transform: translateY(-40px);
 }
 .login-wrapper .login-form .user-name label, .login-wrapper .login-form .user-pass label {
-  font-size: 20px;
+  padding: 0 8px;
+  font-size: 30px;
   position: absolute;
-  left: 0;
-  top: 5px;
+  left: 10px;
+  top: 25%;
   pointer-events: none;
-  transition: 0.4s;
+  transition: 0.4s, border 0.1s ease-in-out, background-color 0.1s;
+}
+.login-wrapper .submit-btn {
+  display: flex;
+  justify-content: center;
+}
+.login-wrapper .submit-btn button {
+  padding: 15px 40px;
+  font-size: 20px;
+  border: none;
+  position: relative;
+  border-radius: 55%;
 }/*# sourceMappingURL=style.css.map */
