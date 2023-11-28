@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>User Login</title>
+
+	<link rel="stylesheet" href="scss/style.css">
 </head>
 <body>
 	
@@ -12,7 +14,10 @@
 
 		<section class="login-form">
 			<div class="user-name">
-				<input type="text" id="user-name" pattern="^.+$"><label for="user-name">User Name</label>
+				<input type="text" id="user-name" required><label for="user-name">User Name</label>
+			</div>
+			<div class="user-pass">
+				<input type="password" id="user-pass" required><label for="user-pass">Password</label>
 			</div>
 		</section>
 	</section>

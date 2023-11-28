@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.login-wrapper {
+  background-color: lightblue;
+  height: 300px;
+  width: 300px;
+  position: relative;
+  top: 150px;
+  left: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+.login-wrapper .web-logo {
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+}
+.login-wrapper .login-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+.login-wrapper .login-form .user-name, .login-wrapper .login-form .user-pass {
+  position: relative;
+}
+.login-wrapper .login-form .user-name input, .login-wrapper .login-form .user-pass input {
+  padding: 5px;
+  font-size: 20px;
+  outline: none;
+}
+.login-wrapper .login-form .user-name input:focus + label, .login-wrapper .login-form .user-name input:valid + label, .login-wrapper .login-form .user-pass input:focus + label, .login-wrapper .login-form .user-pass input:valid + label {
+  transform: translateY(-30px);
+}
+.login-wrapper .login-form .user-name label, .login-wrapper .login-form .user-pass label {
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  pointer-events: none;
+  transition: 0.4s;
+}/*# sourceMappingURL=style.css.map */
