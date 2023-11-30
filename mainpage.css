@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .container{
     background-image:url(./photos/20407831.jpg) ;
    height: 100vh;
