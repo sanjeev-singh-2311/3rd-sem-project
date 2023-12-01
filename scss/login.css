@@ -46,7 +46,6 @@ body {
   transform: rotate(-45deg) translateX(1em);
 }
 .login-area .login-wrapper {
-  background-color: lightblue;
   width: 40vw;
   box-sizing: border-box;
   display: flex;
