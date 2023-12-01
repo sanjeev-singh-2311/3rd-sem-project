@@ -107,7 +107,17 @@ body {
   color: white;
   border: none;
   position: relative;
+  cursor: pointer;
   border-radius: 18%/50%;
   background-color: #7336fe;
+  transition: 0.15s, transform 0.1s;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.login-area .login-wrapper .submit-btn button:hover {
+  background-color: rgba(115, 54, 254, 0.8);
+}
+.login-area .login-wrapper .submit-btn button:active {
+  background-color: rgba(115, 54, 254, 0.6);
+  transform: translate(0, 10px);
+  box-shadow: none;
 }/*# sourceMappingURL=login.css.map */

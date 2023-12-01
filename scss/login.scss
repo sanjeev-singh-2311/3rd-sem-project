@@ -132,15 +132,26 @@ body {
 		.submit-btn {
 			display: flex;
 			justify-content: center;
-	
+			
+			@mixin changeCol($colour){
+				background-color: $colour;
+
+				&:hover {background-color: rgba($colour, 0.8);}
+				&:active {background-color: rgba($colour, 0.6);
+							transform : translate((0, 10px)); 
+							box-shadow: none;}
+			}
+
 			button {
 				padding: 15px 60px;
 				font-size: 20px;
 				color: white;
 				border: none;
 				position: relative;
+				cursor: pointer;
 				border-radius: 18% / 50%;
-				background-color: $purple;
+				@include changeCol($purple);
+				transition: 0.15s, transform 0.1s;
 				box-shadow: 0 5px 10px rgba(black, 0.3);
 			}
 		}
