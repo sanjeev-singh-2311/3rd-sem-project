@@ -9,6 +9,41 @@ body {
   background-color: #00695C;
 }
 
+.web-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  background-color: #7336fe;
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  height: 10dvh;
+  padding: 0;
+}
+.web-header .header-items {
+  font-family: "Open Sans", monospace;
+  height: 100%;
+  margin: 0;
+  font-size: 20px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.web-header .header-items:hover {
+  background-color: #FFA726;
+}
+.web-header .header-log-btn {
+  background-color: rgba(115, 54, 254, 0.5);
+  background-color: #FFA726;
+}
+.web-header .header-log-btn:hover {
+  background-color: #E65100;
+}
+
 .login-area {
   border-radius: 5%/10%;
   display: flex;
@@ -16,8 +51,8 @@ body {
   justify-content: space-between;
   position: fixed;
   right: 150px;
-  top: 80px;
-  bottom: 80px;
+  top: 130px;
+  bottom: 50px;
   width: 80vw;
   background: transparent;
   background-color: rgba(255, 255, 255, 0.3);
@@ -69,9 +104,12 @@ body {
 }
 .login-area .login-wrapper .login-form .link-area {
   padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .login-area .login-wrapper .login-form .link-area a {
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Open Sans", monospace;
   text-decoration: none;
   font-weight: bold;
