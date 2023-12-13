@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>User Login</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+		theme: {
+			extend: {
+			colors: {
+
+			}
+			}
+		}
+		}
+	</script>
+</head>
+<body class="font-mono">
+	
+	<nav class="website-header absolute left-0 right-0 top-0 h-max bg-red-500 text-3xl">
+		<ul class="flex justify-end text-center h-[100%] w-[100%]">
+			<li class="header-item py-4 px-4">Home</li>
+			<li class="header-item py-4 px-4">About</li>
+			<li class="header-item py-4 px-4 bg-green-400">Login</li>
+		</ul>
+	</nav>
+
+	<main class="main-content absolute top-[68px] bottom-0 left-0 right-0 bg-purple-500 overflow-hidden px-28 py-16">
+		<section class="login-wrapper flex h-[100%]">
+			<section class="design-area h-[100%] w-[40%] bg-green-400">
+				<!-- <div class="design-box">Welcoe </div> -->
+			</section>
+			<section class="form-area h-[100%] w-[60%] bg-yellow-300 grid place-items-center gap-0">
+				<div class="form-fields flex flex-col gap-10 w-[60%]">
+					<span class="user-name relative">
+						<input type="text" class="p-2 text-lg w-[100%] peer/user-name" required><label for="user-name" class="absolute px-2 left-2 rounded-md top-1 text-2xl opacity-80 duration-200 peer-valid/user-name:opacity-100 peer-valid/user-name:translate-y-[-75%] peer-valid/user-name:bg-green-400 peer-valid/user-name:text-lg pointer-events-none">Username</label>
+					</span>
+					<span class="user-pass relative">
+						<input type="password" class="p-2 text-lg w-[100%] peer/user-name" required><label for="user-name" class="absolute px-2 left-2 rounded-md top-1 text-2xl opacity-80 duration-200 peer-valid/user-name:opacity-100 peer-valid/user-name:translate-y-[-75%] peer-valid/user-name:bg-green-400 peer-valid/user-name:text-lg pointer-events-none">Password</label>
+					</span>
+				</div>
+
+</body>
+</html>
