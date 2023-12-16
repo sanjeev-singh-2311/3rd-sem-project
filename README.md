@@ -1,3 +1,3 @@
-# Third Sem Project
+# Third Sem Project - Profile Page
 
-Contributors -> Sanjeev, Samarth, Saurav
+Contributors -> Sanjeev
