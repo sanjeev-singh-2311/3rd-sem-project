@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>User Login</title>
+	<title>Register</title>
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script>
 		tailwind.config = {
@@ -23,7 +23,7 @@
 		<ul class="flex justify-end text-center h-[60%] w-[100%] gap-x-5">
 			<li class="header-item py-1 px-4 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="#">Home</a></li>
 			<li class="header-item py-1 px-4 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="#">About</a></li>
-			<li class="header-item py-1 px-4 bg-red-600 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="register.html">Register</a></li>
+			<li class="header-item py-1 px-4 bg-red-600 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="login.html">Login</a></li>
 		</ul>
 	</nav>
 
@@ -37,12 +37,17 @@
 					<span class="user-name relative">
 						<input type="text" class="p-2 text-lg w-[100%] peer/user-name outline-none outline-offset-0 focus-visible:outline-green-400" spellcheck="false" required><label for="user-name" class="absolute px-2 left-2 rounded-md top-1 text-2xl opacity-50 duration-200 peer-valid/user-name:opacity-100 peer-valid/user-name:translate-y-[-75%] peer-valid/user-name:bg-green-400 peer-valid/user-name:text-lg pointer-events-none peer-focus/user-name:opacity-100 peer-focus/user-name:translate-y-[-75%] peer-focus/user-name:bg-green-400 peer-focus/user-name:text-lg">Username</label>
 					</span>
-					<span class="user-pass mt-4 relative">
+					<span class="user-email mt-2 relative">
+						<input type="text" class="p-2 text-lg w-[100%] peer/user-email outline-none outline-offset-0 focus-visible:outline-green-400" spellcheck="false" required><label for="user-email" class="absolute px-2 left-2 rounded-md top-1 text-2xl opacity-50 duration-200 peer-valid/user-email:opacity-100 peer-valid/user-email:translate-y-[-75%] peer-valid/user-email:bg-green-400 peer-valid/user-email:text-lg pointer-events-none peer-focus/user-email:opacity-100 peer-focus/user-email:translate-y-[-75%] peer-focus/user-email:bg-green-400 peer-focus/user-email:text-lg">E-mail</label>
+					</span>
+					<span class="user-pass mt-2 relative">
 						<input type="password" class="p-2 text-lg w-[100%] peer/user-pass outline-none outline-offset-0 focus-visible:outline-green-400" spellcheck="false" required><label for="user-pass" class="absolute px-2 left-2 rounded-md top-1 text-2xl opacity-50 duration-200 peer-valid/user-pass:opacity-100 peer-valid/user-pass:translate-y-[-75%] peer-valid/user-pass:bg-green-400 peer-valid/user-pass:text-lg pointer-events-none peer-focus/user-pass:opacity-100 peer-focus/user-pass:translate-y-[-75%] peer-focus/user-pass:bg-green-400 peer-focus/user-pass:text-lg">Password</label>
 					</span>
-					<span class="links-area flex items-center justify-between">
-						<span class="forgot-btn"><a href="#">Forgot Password?</a></span>
-						<span class="new-account"><a href="#">Create a new account?</a></span>
+					<span class="user-pass-r mt-2 relative">
+						<input type="password" class="p-2 text-lg w-[100%] peer/user-pass-r outline-none outline-offset-0 focus-visible:outline-green-400" spellcheck="false" required><label for="user-pass-r" class="absolute px-2 left-2 rounded-md top-1 text-2xl opacity-50 duration-200 peer-valid/user-pass-r:opacity-100 peer-valid/user-pass-r:translate-y-[-75%] peer-valid/user-pass-r:bg-green-400 peer-valid/user-pass-r:text-lg pointer-events-none peer-focus/user-pass-r:opacity-100 peer-focus/user-pass-r:translate-y-[-75%] peer-focus/user-pass-r:bg-green-400 peer-focus/user-pass-r:text-lg">Repeat Password</label>
+					</span>
+					<span class="links-area flex items-center justify-end">
+						<span class="new-account"><a href="#">Already have an account?</a></span>
 					</span>
 					<span class="submit-btn mt-4 text-center w-[100%]"><a href="#" class="w-[40%] bg-purple-600 px-8 py-3 text-xl rounded-3xl text-white hover:bg-purple-600/70 active:bg-purple-600/50">Submit</a></span>
 				</div>
