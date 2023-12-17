@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>User Profile</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+		theme: {
+			extend: {
+			colors: {
+
+			}
+			}
+		}
+		}
+	</script>
+
+	<style>
+		*::-webkit-scrollbar {
+			display: none;
+		}
+		
+		* {
+			-ms-overflow-style: none;
+			scrollbar-width: none;
+			scroll-behavior: smooth;
+		}
+	</style>
+	
+</head>
+<body class="font-mono">
+	<nav class="website-header sticky left-0 right-0 top-0 h-max bg-white text-sm md:text-3xl z-50 p-2 shadow-lg z-50">
+		<ul class="flex justify-end text-center h-[60%] w-[100%] gap-x-5">
+			<li class="header-item py-1 px-4 text-black rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="#">Home</a></li>
+			<li class="header-item py-1 px-4 text-black rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="#">About</a></li>
+			<li class="header-item py-1 px-4 text-black rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="register.html">Register</a></li>
+		</ul>
+	</nav>
+
+	<main class="absolute top-[10%] bottom-0 left-0 right-0 flex flex-col">
+
+		<section class="imag-sec flex h-[30dvh] relative m-4">
+			<span class="cover-img w-[100%] h-[100%] box-border rounded-lg overflow-hidden"><img class="object-cover object-top h-full w-full" src="https://i.pinimg.com/originals/12/84/a4/1284a4ee744be631e97a04d1934877d9.jpg" alt=""></span>
+			<span class="profile-img w-[20%] absolute right-10 translate-y-8 rounded-md overflow-hidden shadow-xl box-border object-contain"><img class="object-contain h-[100%] w-[100%]" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fc4%2F0c%2Fe9%2Fc40ce92453203b0696836274350a6063.png&f=1&nofb=1&ipt=b122b3baa3a6f7b667bc9b781aaf0220340a55974666f9c73a968356557679e6&ipo=images" alt=""></span>
+		</section>
+
+		<section class="sidebar-section flex h-max mt-16 pb-8">
+			<aside class="side-menu box-border flex flex-col justify-between shadow-2xl rounded-md bg-[#3541bb] text-white my-0 mx-4 p-4 pl-4 pr-28 w-max h-80 -translate-y-6">
+				<ul class="side-menu-items text-xl flex flex-col gap-5">
+					<li class="select-none cursor-pointer">Profile</li>
+					<li class="select-none cursor-pointer">Settings</li>
+				</ul>
+				<ul class="side-menu-items text-xl flex flex-col gap-5">
+					<li class="select-none cursor-pointer">Logout</li>
+				</ul>
+			</aside>
+
+			<section class="project-section flex flex-col shadow-2xl h-max mx-4">
+				<div class="project-wrapper flex even:flex-row-reverse">
+					<span class="img-section bg-green-400 w-[456px] aspect-square"><img src="https://i.pinimg.com/736x/c2/2d/1d/c22d1d435027b16f2dcfb8b73204f92d.jpg" class="object-contain h-full w-full" alt=""></span>
+					<span class="project-info flex items-center text-lg px-8 align-middle text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, eaque reiciendis laboriosam optio porro doloremque exercitationem cumque! Voluptas quasi accusamus reiciendis, animi vero, iste eaque temporibus nobis fugit libero error.</span>
+				</div>
+				<div class="project-wrapper flex even:flex-row-reverse">
+					<span class="img-section bg-green-400 w-[456px] aspect-square"><img src="https://i.pinimg.com/736x/c2/2d/1d/c22d1d435027b16f2dcfb8b73204f92d.jpg" class="object-contain h-full w-full" alt=""></span>
+					<span class="project-info flex items-center text-lg px-8 align-middle text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, eaque reiciendis laboriosam optio porro doloremque exercitationem cumque! Voluptas quasi accusamus reiciendis, animi vero, iste eaque temporibus nobis fugit libero error.</span>
+				</div>
+				<div class="project-wrapper flex even:flex-row-reverse">
+					<span class="img-section bg-green-400 w-[456px] aspect-square"><img src="https://i.pinimg.com/736x/c2/2d/1d/c22d1d435027b16f2dcfb8b73204f92d.jpg" class="object-contain h-full w-full" alt=""></span>
+					<span class="project-info flex items-center text-lg px-8 align-middle text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, eaque reiciendis laboriosam optio porro doloremque exercitationem cumque! Voluptas quasi accusamus reiciendis, animi vero, iste eaque temporibus nobis fugit libero error.</span>
+				</div>
+				<div class="project-wrapper flex even:flex-row-reverse">
+					<span class="img-section bg-green-400 w-[456px] aspect-square"><img src="https://i.pinimg.com/736x/c2/2d/1d/c22d1d435027b16f2dcfb8b73204f92d.jpg" class="object-contain h-full w-full" alt=""></span>
+					<span class="project-info flex items-center text-lg px-8 align-middle text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, eaque reiciendis laboriosam optio porro doloremque exercitationem cumque! Voluptas quasi accusamus reiciendis, animi vero, iste eaque temporibus nobis fugit libero error.</span>
+				</div>
+			</section>
+		</section>
+		
+
+	</main>	
+</body>
+</html>
