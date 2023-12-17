@@ -1,7 +1,3 @@
-# Contribution
-
-Login and Registration page -> Sanjeev
-
-# Third Sem Project - Profile Page
+# Third Sem Project - Project Backend
 
 Contributors -> Sanjeev
