@@ -12,7 +12,7 @@ class UserData(models.Model):
 		verbose_name_plural = "UserDatas"
 
 	def __str__(self):
-		return self.username
+		return f"{self.username}	{self.email}"
 
 	def get_absolute_url(self):
 		return reverse("UserData_detail", kwargs={"pk": self.pk})
