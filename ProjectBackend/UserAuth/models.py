@@ -3,9 +3,9 @@ from django.db import models
 # Create your models here.
 class UserData(models.Model):
 
-	username = models.CharField(max_length=50, verbose_name = "UserName")
-	email = models.EmailField(max_length=254, verbose_name = "UserEmail")
-	password = models.CharField( max_length=50, verbose_name = "UserPass")
+	username = models.TextField(verbose_name = "User Name")
+	email = models.EmailField(max_length=254, verbose_name = "User Email")
+	password = models.TextField(verbose_name = "Password")
 
 	class Meta:
 		verbose_name = "UserData"
