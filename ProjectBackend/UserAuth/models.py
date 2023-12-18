@@ -8,8 +8,8 @@ class UserData(models.Model):
 	password = models.TextField(verbose_name = "Password")
 
 	class Meta:
-		verbose_name = "UserData"
-		verbose_name_plural = "UserDatas"
+		verbose_name = "User Data"
+		verbose_name_plural = "User Datas"
 
 	def __str__(self):
 		return f"{self.username}	{self.email}"
