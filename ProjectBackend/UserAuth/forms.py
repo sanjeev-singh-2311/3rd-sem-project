@@ -1,5 +1,8 @@
-from django import forms
+# from django import forms
+# from .models import UserData
 
-class LoginForm(forms.Form):
-	username = forms.CharField('username', max_length=100, required=True)
-	password = forms.CharField('password', max_length=100, required=True)
+# class RegistrationForm(forms.Form):
+# 	username = forms.CharField(max_length=100, required=True)
+# 	email = forms.EmailField(required=True)
+# 	password = forms.CharField(max_length=100, required=True)
+
