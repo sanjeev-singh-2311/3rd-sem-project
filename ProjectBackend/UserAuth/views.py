@@ -4,9 +4,9 @@ from django.views.generic import TemplateView
 # from .forms import RegistrationForm
 from .models import UserData
 
-# Create your views here.
 class LoginPageView(TemplateView):
 	template_name = "login.html"
+	# TODO -> Make the login form work
 
 class RegistrationPageView(TemplateView):
 	template_name = "register.html"
@@ -15,10 +15,13 @@ class RegistrationPageView(TemplateView):
 		return render(request, self.template_name)
 
 	def post(self, request, *args, **kwargs):
+
+		# TODO -> Make a validation system for the data
+		# TODO -> Try to use a custom form for this
 		# if form.is_valid():
 		username = request.POST.get('username')
 		email = request.POST.get('email')
-		password = request.POST.get('password1')  # Use password1 as it's the hashed password
+		password = request.POST.get('password1')  # TODO -> also ger password2 + Implement password hashing
 
 		if (not all([username, email, password])):
 			return HttpResponse("Empty fields are not allowed")
@@ -26,6 +29,3 @@ class RegistrationPageView(TemplateView):
 		data_entry = UserData(username=username, email=email, password=password)
 		data_entry.save()
 		return HttpResponse("Registration successful")
-
-            # You might want to redirect to a success page after registration
-            # return render(request, "registration_success.html")
