@@ -55,7 +55,7 @@ ROOT_URLCONF = 'thirdsemproj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / '\\ProjectBackend\\UserAuth\\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

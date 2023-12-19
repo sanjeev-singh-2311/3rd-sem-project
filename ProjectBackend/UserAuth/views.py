@@ -3,5 +3,5 @@ from django.views.generic import TemplateView
 
 
 # Create your views here.
-class LoginPage(TemplateView):
-	template_name = ".html"
+class LoginPageView(TemplateView):
+	template_name = "login.html"
