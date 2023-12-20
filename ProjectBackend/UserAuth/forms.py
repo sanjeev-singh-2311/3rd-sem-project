@@ -1,8 +1,16 @@
-# from django import forms
-# from .models import UserData
+from .models import UserData
 
-# class RegistrationForm(forms.Form):
-# 	username = forms.CharField(max_length=100, required=True)
-# 	email = forms.EmailField(required=True)
-# 	password = forms.CharField(max_length=100, required=True)
+# ! NOT TO BE USED RIGHT NOW, NEEDS COMPLETION
+class RegistrationForm:
+	def __init__(self, username, email, password1, password2):
+		self.username = username
+		self.email = email
+		self.password = password1
+		self.repPassword = password2
 
+	def is_valid(self):
+		if not (self.password == self.repPassword):
+			return False
+		return True
+
+# ! NOT TO BE USED RIGHT NOW, NEEDS COMPLETION
