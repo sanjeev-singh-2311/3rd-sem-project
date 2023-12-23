@@ -11,6 +11,14 @@ class UserData(models.Model):
 	class Meta:
 		verbose_name = "User Data" # Human readable version for table name in the database 
 		verbose_name_plural = "User Datas"
+	
+	def enterData(form):
+		data = UserData()
+		data.username = form.username
+		data.email = form.email
+		data.password = form.password
+
+		data.save()
 
 	def __str__(self):
 		return f"{self.username}"
