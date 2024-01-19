@@ -24,9 +24,11 @@ class RegistrationPageView(TemplateView):
 		# password = request.POST.get('password1')  # TODO -> also ger password2 + Implement password hashing
 
 		form = RegistrationForm(request.POST)
+		print(request.POST)
 
-		if (n := form.is_valid()) == "Registration successful":
+		form_check = form.is_valid()
+
+		if form_check["status"]:
 			UserData.enterData(form)
-			# return HttpResponse("Registration successful")
 		
-		return HttpResponse(n)
+		return HttpResponse(form_check["error"])

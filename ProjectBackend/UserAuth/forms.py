@@ -1,7 +1,6 @@
 from .models import UserData
 import re
 
-
 # ! NOT TO BE USED RIGHT NOW, NEEDS COMPLETION
 class RegistrationForm:
 	def __init__(self, post):
@@ -13,7 +12,7 @@ class RegistrationForm:
 	def is_valid(self):
 		if not (self.password == self.repPassword):
 			# * Check if the Password and repeated passwords don't match
-			return "Password doesn't match Repeted Password"
+			return {"error" : "Password doesn't match Repeted Password", "status" : False}
 
 		try:
 			username_valid = UserData.objects.get(username=self.username)
@@ -21,13 +20,13 @@ class RegistrationForm:
 			username_valid = None
 		
 		if username_valid is not None:
-			return "Username already exists"
+			return {"error" : "Username already exists", "status" : False}
 		email_pat = re.compile(r"^\w+@\w+.\w+$")
 		print(re.match(email_pat,self.email))
 		if re.match(email_pat, self.email) is None:
-			return "Email is invalid"
+			return {"error" : "Email is invalid", "status" : False}
 
 		
-		return "Registration successful"
+		return {"error" : "Registration successful", "status" : True}
 
 # ! NOT TO BE USED RIGHT NOW, NEEDS COMPLETION
