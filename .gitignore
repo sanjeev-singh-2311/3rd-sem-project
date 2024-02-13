@@ -1,0 +1,6 @@
+# Add files here to be ignored by git 
+
+virtualenv
+ProjectBackend/db.sqlite3
+ProjectBackend/virtualenv
+ProjectBackend/thirdsemproj/__pycache__
