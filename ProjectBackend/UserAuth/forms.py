@@ -23,11 +23,12 @@ class RegistrationForm:  # ! NOT TO BE USED RIGHT NOW, NEEDS COMPLETION
     def is_valid(self):
         if not (self.password == self.repPassword):
             # * Check if the Password and repeated passwords don't match
-            return {"error": "Password doesn't match Repeted Password", "status": False}
+            return {"error": "Password doesn't match Repeted Password",
+                    "status": False}
 
         try:
             username_valid = UserData.objects.get(username=self.username)
-        except:
+        except UserData.DoesNotExist:
             username_valid = None
 
         if username_valid is not None:

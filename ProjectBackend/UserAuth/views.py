@@ -17,7 +17,6 @@ class LoginPageView(TemplateView):
     #     form = LoginForm(request.POST)
 
 
-
 class RegistrationPageView(TemplateView):
     template_name = "register.html"
 

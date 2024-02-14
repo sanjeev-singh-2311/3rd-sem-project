@@ -11,6 +11,7 @@ class UserData(models.Model):
 
     email = models.EmailField(max_length=254, verbose_name="User Email")
     password = models.CharField(max_length=100, verbose_name="Password")
+    usertype = models.BooleanField(verbose_name="User Type")
 
     class Meta:
         verbose_name = "User Data"
@@ -22,6 +23,7 @@ class UserData(models.Model):
         data.username = form.username
         data.email = form.email
         data.password = form.password
+        data.usertype = form.usertype
 
         data.save()
 
