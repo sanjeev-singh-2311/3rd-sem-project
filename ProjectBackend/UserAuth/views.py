@@ -3,32 +3,42 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from .forms import RegistrationForm
 from .models import UserData
+from django.contrib.auth import authenticate, login
+
 
 class LoginPageView(TemplateView):
-	template_name = "login.html"
-	# TODO -> Make the login form work
+    template_name = "login.html"
+    # TODO -> Make the login form work
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name)
+
+    # def post(self, request, *args, **kwargs):
+    #     form = LoginForm(request.POST)
+
+
 
 class RegistrationPageView(TemplateView):
-	template_name = "register.html"
+    template_name = "register.html"
 
-	def get(self, request, *args, **kwargs):
-		return render(request, self.template_name)
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name)
 
-	def post(self, request, *args, **kwargs):
+    def post(self, request, *args, **kwargs):
 
-		# TODO -> Make a validation system for the data
-		# TODO -> Try to use a custom form for this
-		# if form.is_valid():
-		# username = request.POST.get('username')
-		# email = request.POST.get('email')
-		# password = request.POST.get('password1')  # TODO -> also ger password2 + Implement password hashing
+        # TODO -> Make a validation system for the data
+        # TODO -> Try to use a custom form for this
+        # if form.is_valid():
+        # username = request.POST.get('username')
+        # email = request.POST.get('email')
+        # password = request.POST.get('password1')  # TODO -> also ger password2 + Implement password hashing
 
-		form = RegistrationForm(request.POST)
-		print(request.POST)
+        form = RegistrationForm(request.POST)
+        print(request.POST)
 
-		form_check = form.is_valid()
+        form_check = form.is_valid()
 
-		if form_check["status"]:
-			UserData.enterData(form)
-		
-		return HttpResponse(form_check["error"])
+        if form_check["status"]:
+            UserData.enterData(form)
+
+        return HttpResponse(form_check["error"])
