@@ -1,4 +1,5 @@
 {% load static %}
+{% load filters %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -37,7 +38,7 @@
 						<li><a class="main-nav-link" href="homepage.html">Home</a></li>
 						<li><a class="main-nav-link" href="#">About</a></li>
 						<li><a class="main-nav-link" href={% url 'register-page' %}>Register</a></li>
-						<li><a class="main-nav-link" href={% url 'login-page' %}>Login</a></li>
+						<li><a class="main-nav-link" href={% url 'login-page' %}>{% if user|is_auth:request %}Logout{% else %}Login{% endif %}</a></li>
 					</ul>
 				</nav>
 			</header>

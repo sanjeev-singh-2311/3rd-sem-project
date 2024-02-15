@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 from .forms import RegistrationForm, LoginForm
 from .models import UserData
 from django.shortcuts import redirect
-# from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login
 
 
 class LoginPageView(TemplateView):
@@ -15,13 +15,22 @@ class LoginPageView(TemplateView):
         return render(request, self.template_name)
 
     def post(self, request, *args, **kwargs):
+        print(request)
         form = LoginForm(request.POST)
+        auth_json = form.formAuth()
+        if auth_json["status"]:
+            request.session['username'] = form.username
+            print("Here")
+            return redirect("home-page")
+        return redirect('login-page')
 
-        resp = form.formAuth()
+        # user = authenticate(request, username=form.username, password=form.password)
 
-        if resp["status"]:
-            request.session['user-name'] = form.username
-            return redirect("HomePage:home-page")
+        # if user:
+        #     login(request, user)
+        #     return redirect("HomePage:home-page")
+        # else:
+        #     return redirect("login-page")
 
 
 class RegistrationPageView(TemplateView):

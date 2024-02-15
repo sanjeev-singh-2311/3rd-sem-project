@@ -26,6 +26,7 @@ class RegistrationForm:  # ! NOT TO BE USED RIGHT NOW, NEEDS COMPLETION
         self.email = post.get('email')
         self.password = post.get('password1')
         self.repPassword = post.get('password2')
+        self.usertype = True
 
     def is_valid(self):
         if not (self.password == self.repPassword):

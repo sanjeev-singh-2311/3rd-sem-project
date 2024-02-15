@@ -20,30 +20,36 @@ body {
 /**************************************************/
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fdf2e9;
-    height: 9.6rem; /* we fix the height so as to make the navigation sticky i.e stays even when controlled */
-    padding: 0 4.8rem;
+	display: flex;
+	position : absolute;
+	font-size : 12px;
+	top : 0;
+	right : 0;
+	left : 0;
+	justify-content: space-between;
+	align-items: center;
+	z-index : 20;
+	background-color: #fdf2e9;
+	height: max-content; /* we fix the height so as to make the navigation sticky i.e stays even when controlled */
+	padding: 0 4.8rem;
 }
 
 .header-register {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fdf2e9;
-    height: 9.6rem; /* we fix the height so as to make the navigation sticky i.e stays even when controlled */
-    padding: 0 4.8rem;
-    z-index: 5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fdf2e9;
+	height: 9.6rem; /* we fix the height so as to make the navigation sticky i.e stays even when controlled */
+	padding: 0 4.8rem;
+	z-index: 5;
 }
 
 .logo {
-    height: 2.6rem;
+	height: 2.6rem;
 }
 
 /***************************************************/
@@ -51,27 +57,27 @@ body {
 /***************************************************/
 
 .main-nav-list {
-    list-style: none;
-    display: flex;
-    gap: 3.2rem;
+	list-style: none;
+	display: flex;
+	gap: 3.2rem;
 }
 
 .main-nav-link:link,
 .main-nav-link:visited {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    font-weight: 550;
-    font-size: 1.8rem;
-    transition: all 0.4s;
-    background-color: #e67e22;
-    border-radius: 9px;
-    padding: 1.2rem 2.4rem;
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	font-weight: 550;
+	font-size: 1.8rem;
+	transition: all 0.4s;
+	background-color: #e67e22;
+	border-radius: 9px;
+	padding: 0.2rem 2.4rem;
 }
 
 .main-nav-link:hover,
 .main-nav-link:active {
-    background-color: #8a4c14;
+	background-color: #8a4c14;
 }
 
 /***************************************************/
@@ -79,12 +85,12 @@ body {
 /***************************************************/
 
 .hero {
-    max-width: 130rem;
-    margin: 0 auto;
-    padding: 0 3.2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 9.6rem;
+	max-width: 130rem;
+	margin: 0 auto;
+	padding: 0 3.2rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 9.6rem;
     align-items: center;
 }
 

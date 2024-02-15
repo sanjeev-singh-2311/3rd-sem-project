@@ -1,9 +1,77 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>User Login</title>
+		<style>
+			/***************************************************/
+			/*HEADER*/
+			/**************************************************/
+
+			.header {
+				display: flex;
+				position : absolute;
+				font-size : 12px;
+				top : 0;
+				right : 0;
+				left : 0;
+				justify-content: space-between;
+				align-items: center;
+				z-index : 20;
+				background-color: #fdf2e9;
+				height: max-content; /* we fix the height so as to make the navigation sticky i.e stays even when controlled */
+				padding: 0 4.8rem;
+			}
+
+		.header-register {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #fdf2e9;
+			height: 9.6rem; /* we fix the height so as to make the navigation sticky i.e stays even when controlled */
+			padding: 0 4.8rem;
+			z-index: 5;
+		}
+
+		.logo {
+			height: 2.6rem;
+		}
+
+		/***************************************************/
+		/*NAVIGATION*/
+		/***************************************************/
+
+		.main-nav-list {
+			list-style: none;
+			display: flex;
+			gap: 3.2rem;
+		}
+
+		.main-nav-link:link,
+		.main-nav-link:visited {
+			display: inline-block;
+			text-decoration: none;
+			color: #fff;
+			font-weight: 550;
+			font-size: 1.8rem;
+			transition: all 0.4s;
+			background-color: #e67e22;
+			border-radius: 9px;
+			padding: 0.2rem 2.4rem;
+		}
+
+		.main-nav-link:hover,
+		.main-nav-link:active {
+			background-color: #8a4c14;
+		}
+		</style>
+
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script>
 			tailwind.config = {
@@ -19,13 +87,26 @@
 	</head>
 	<body class="font-mono">
 
-		<nav class="website-header absolute left-0 right-0 top-0 h-max bg-transparent text-3xl z-50 p-2">
-			<ul class="flex justify-end text-center h-[60%] w-[100%] gap-x-5">
-				<li class="header-item py-1 px-4 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href={% url 'home-page' %}>Home</a></li>
-				<li class="header-item py-1 px-4 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="#">About</a></li>
-				<li class="header-item py-1 px-4 bg-lime-400 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="{% url 'register-page' %}">Register</a></li>
-			</ul>
-		</nav>
+		<!-- <nav class="website-header absolute left-0 right-0 top-0 h-max bg-transparent text-3xl z-50 p-2"> -->
+		<!-- 	<ul class="flex justify-end text-center h-[60%] w-[100%] gap-x-5"> -->
+		<!-- 		<li class="header-item py-1 px-4 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href={% url 'home-page' %}>Home</a></li> -->
+		<!-- 		<li class="header-item py-1 px-4 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="#">About</a></li> -->
+		<!-- 		<li class="header-item py-1 px-4 bg-lime-400 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="{% url 'register-page' %}">Register</a></li> -->
+		<!-- 	</ul> -->
+		<!-- </nav> -->
+
+		<header class="header">
+			<img class="logo" alt="abhyuday logo" src={% static "images/logos/main-logo.png" %}/>
+			<nav class="main-nav">
+				<ul class="main-nav-list">
+					<li><a class="main-nav-link" href={% url 'home-page' %}>Home</a></li>
+					<li><a class="main-nav-link" href={% url 'home-page' %}>About</a></li>
+					<li><a class="main-nav-link" href={% url 'register-page' %}>Register</a></li>
+					<!-- <li><a class="main-nav-link" href={% url 'login-page' %}>Login</a></li> -->
+				</ul>
+			</nav>
+		</header>
+
 
 		<main class="main-content absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 overflow-hidden px-28 py-28">
 			<section class="login-wrapper flex h-[100%] bg-white/20 backdrop-blur-xl rounded-2xl">
@@ -35,10 +116,10 @@
 				<section class="form-area h-[100%] w-[60%] grid place-items-center gap-0">
 					<form class="form-fields flex flex-col gap-4 w-[70%]" method='POST'>{% csrf_token %}
 						<span class="user-name relative">
-							<input type="text" class="p-2 text-lg w-[100%] peer/user-name outline-none outline-offset-0 focus-visible:outline-green-400" spellcheck="false" required><label for="user-name" class="absolute px-2 left-2 rounded-md top-1 text-2xl opacity-50 duration-200 peer-valid/user-name:opacity-100 peer-valid/user-name:translate-y-[-75%] peer-valid/user-name:bg-green-400 peer-valid/user-name:text-lg pointer-events-none peer-focus/user-name:opacity-100 peer-focus/user-name:translate-y-[-75%] peer-focus/user-name:bg-green-400 peer-focus/user-name:text-lg">Username</label>
+							<input type="text" name="username" class="p-2 text-lg w-[100%] peer/user-name outline-none outline-offset-0 focus-visible:outline-green-400" spellcheck="false" required><label for="user-name" class="absolute px-2 left-2 rounded-md top-1 text-2xl opacity-50 duration-200 peer-valid/user-name:opacity-100 peer-valid/user-name:translate-y-[-75%] peer-valid/user-name:bg-green-400 peer-valid/user-name:text-lg pointer-events-none peer-focus/user-name:opacity-100 peer-focus/user-name:translate-y-[-75%] peer-focus/user-name:bg-green-400 peer-focus/user-name:text-lg">Username</label>
 						</span>
 						<span class="user-pass mt-4 relative">
-							<input type="password" class="p-2 text-lg w-[100%] peer/user-pass outline-none outline-offset-0 focus-visible:outline-green-400" spellcheck="false" required><label for="user-pass" class="absolute px-2 left-2 rounded-md top-1 text-2xl opacity-50 duration-200 peer-valid/user-pass:opacity-100 peer-valid/user-pass:translate-y-[-75%] peer-valid/user-pass:bg-green-400 peer-valid/user-pass:text-lg pointer-events-none peer-focus/user-pass:opacity-100 peer-focus/user-pass:translate-y-[-75%] peer-focus/user-pass:bg-green-400 peer-focus/user-pass:text-lg">Password</label>
+							<input type="password" name="password" class="p-2 text-lg w-[100%] peer/user-pass outline-none outline-offset-0 focus-visible:outline-green-400" spellcheck="false" required><label for="user-pass" class="absolute px-2 left-2 rounded-md top-1 text-2xl opacity-50 duration-200 peer-valid/user-pass:opacity-100 peer-valid/user-pass:translate-y-[-75%] peer-valid/user-pass:bg-green-400 peer-valid/user-pass:text-lg pointer-events-none peer-focus/user-pass:opacity-100 peer-focus/user-pass:translate-y-[-75%] peer-focus/user-pass:bg-green-400 peer-focus/user-pass:text-lg">Password</label>
 						</span>
 						<span class="links-area flex items-center justify-between">
 							<span class="forgot-btn"><a href="#">Forgot Password?</a></span>

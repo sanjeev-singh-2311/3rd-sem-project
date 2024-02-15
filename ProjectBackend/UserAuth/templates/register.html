@@ -5,6 +5,72 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Register</title>
+	<style>
+		/***************************************************/
+		/*HEADER*/
+		/**************************************************/
+
+		.header {
+			display: flex;
+			position : absolute;
+			font-size : 12px;
+			top : 0;
+			right : 0;
+			left : 0;
+			justify-content: space-between;
+			align-items: center;
+			z-index : 20;
+			background-color: #fdf2e9;
+			height: max-content; /* we fix the height so as to make the navigation sticky i.e stays even when controlled */
+			padding: 0 4.8rem;
+		}
+
+		.header-register {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #fdf2e9;
+			height: 9.6rem; /* we fix the height so as to make the navigation sticky i.e stays even when controlled */
+			padding: 0 4.8rem;
+			z-index: 5;
+		}
+
+		.logo {
+			height: 2.6rem;
+		}
+
+		/***************************************************/
+		/*NAVIGATION*/
+		/***************************************************/
+
+		.main-nav-list {
+			list-style: none;
+			display: flex;
+			gap: 3.2rem;
+		}
+
+		.main-nav-link:link,
+		.main-nav-link:visited {
+			display: inline-block;
+			text-decoration: none;
+			color: #fff;
+			font-weight: 550;
+			font-size: 1.8rem;
+			transition: all 0.4s;
+			background-color: #e67e22;
+			border-radius: 9px;
+			padding: 0.2rem 2.4rem;
+		}
+
+		.main-nav-link:hover,
+		.main-nav-link:active {
+			background-color: #8a4c14;
+		}
+	</style>
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script>
 		tailwind.config = {
@@ -20,24 +86,24 @@
 </head>
 <body class="font-mono">
 	
-	<nav class="website-header absolute left-0 right-0 top-0 h-max bg-transparent text-3xl z-50 p-2">
-		<ul class="flex justify-end text-center h-[60%] w-[100%] gap-x-5">
-			<li class="header-item py-1 px-4 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href={% url 'home-page' %}>Home</a></li>
-			<li class="header-item py-1 px-4 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="#">About</a></li>
-			<li class="header-item py-1 px-4 bg-lime-400 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="{% url 'login-page' %}">Login</a></li>
-		</ul>
-	</nav>
-	<!-- <header class="header z-200"> -->
-	<!-- 	<img class="logo" alt="abhyuday logo" src={% static "images/logos/main-logo.png" %}/> -->
-	<!-- 	<nav class="main-nav"> -->
-	<!-- 		<ul class="main-nav-list"> -->
-	<!-- 			<li><a class="main-nav-link" href="homepage.html">Home</a></li> -->
-	<!-- 			<li><a class="main-nav-link" href="#">About</a></li> -->
-	<!-- 			<!-1- <li><a class="main-nav-link" href={% url 'register-page' %}>Register</a></li> -1-> -->
-	<!-- 			<li><a class="main-nav-link" href={% url 'login-page' %}>Login</a></li> -->
-	<!-- 		</ul> -->
-	<!-- 	</nav> -->
-	<!-- </header> -->
+	<!-- <nav class="website-header absolute left-0 right-0 top-0 h-max bg-transparent text-3xl z-50 p-2"> -->
+	<!-- 	<ul class="flex justify-end text-center h-[60%] w-[100%] gap-x-5"> -->
+	<!-- 		<li class="header-item py-1 px-4 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href={% url 'home-page' %}>Home</a></li> -->
+	<!-- 		<li class="header-item py-1 px-4 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="#">About</a></li> -->
+	<!-- 		<li class="header-item py-1 px-4 bg-lime-400 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="{% url 'login-page' %}">Login</a></li> -->
+	<!-- 	</ul> -->
+	<!-- </nav> -->
+	<header class="header">
+		<img class="logo" alt="abhyuday logo" src={% static "images/logos/main-logo.png" %}/>
+		<nav class="main-nav">
+			<ul class="main-nav-list">
+				<li><a class="main-nav-link" href={% url 'home-page' %}>Home</a></li>
+				<li><a class="main-nav-link" href={% url 'home-page' %}>About</a></li>
+				<!-- <li><a class="main-nav-link" href={% url 'register-page' %}>Register</a></li> -->
+				<li><a class="main-nav-link" href={% url 'login-page' %}>Login</a></li>
+			</ul>
+		</nav>
+	</header>
 
 
 	<main class="main-content absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 overflow-hidden px-28 py-28">
