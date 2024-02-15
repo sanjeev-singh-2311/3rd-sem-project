@@ -9,7 +9,14 @@ class LoginForm:
         self.password = post.get("password")
 
     def formAuth(self):
-        pass
+        try:
+            db = UserData.objects.get(username=self.username)
+            if not db.password == self.password:
+                return {"error": "Password Mismatch", "status": False}
+        except UserData.DoesNotExist:
+            return {"error": "User doesn't exist", "status": False}
+
+        return {"error": "Login successful", "status": True}
 
 
 class RegistrationForm:  # ! NOT TO BE USED RIGHT NOW, NEEDS COMPLETION

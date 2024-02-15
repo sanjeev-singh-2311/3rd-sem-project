@@ -1,9 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic import TemplateView
-from .forms import RegistrationForm
+from .forms import RegistrationForm, LoginForm
 from .models import UserData
-from django.contrib.auth import authenticate, login
+from django.shortcuts import redirect
+# from django.contrib.auth import authenticate, login
 
 
 class LoginPageView(TemplateView):
@@ -13,8 +14,14 @@ class LoginPageView(TemplateView):
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name)
 
-    # def post(self, request, *args, **kwargs):
-    #     form = LoginForm(request.POST)
+    def post(self, request, *args, **kwargs):
+        form = LoginForm(request.POST)
+
+        resp = form.formAuth()
+
+        if resp["status"]:
+            request.session['user-name'] = form.username
+            return redirect("HomePage:home-page")
 
 
 class RegistrationPageView(TemplateView):

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,11 +22,23 @@
 	
 	<nav class="website-header absolute left-0 right-0 top-0 h-max bg-transparent text-3xl z-50 p-2">
 		<ul class="flex justify-end text-center h-[60%] w-[100%] gap-x-5">
-			<li class="header-item py-1 px-4 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="#">Home</a></li>
+			<li class="header-item py-1 px-4 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href={% url 'home-page' %}>Home</a></li>
 			<li class="header-item py-1 px-4 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="#">About</a></li>
 			<li class="header-item py-1 px-4 bg-lime-400 text-white rounded-md hover:bg-orange-600 duration-200 select-none cursor-pointer"><a href="{% url 'login-page' %}">Login</a></li>
 		</ul>
 	</nav>
+	<!-- <header class="header z-200"> -->
+	<!-- 	<img class="logo" alt="abhyuday logo" src={% static "images/logos/main-logo.png" %}/> -->
+	<!-- 	<nav class="main-nav"> -->
+	<!-- 		<ul class="main-nav-list"> -->
+	<!-- 			<li><a class="main-nav-link" href="homepage.html">Home</a></li> -->
+	<!-- 			<li><a class="main-nav-link" href="#">About</a></li> -->
+	<!-- 			<!-1- <li><a class="main-nav-link" href={% url 'register-page' %}>Register</a></li> -1-> -->
+	<!-- 			<li><a class="main-nav-link" href={% url 'login-page' %}>Login</a></li> -->
+	<!-- 		</ul> -->
+	<!-- 	</nav> -->
+	<!-- </header> -->
+
 
 	<main class="main-content absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 overflow-hidden px-28 py-28">
 		<section class="login-wrapper flex h-[100%] bg-white/20 backdrop-blur-xl rounded-2xl">
