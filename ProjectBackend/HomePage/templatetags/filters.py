@@ -7,7 +7,7 @@ register = template.Library()
 
 @register.filter
 def is_auth(user, request):
-    user_name = request.session.get("username")
+    user_name = request.session["username"]
     if user_name:
         try:
             db = UserData.objects.get(username=user_name)

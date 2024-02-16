@@ -33,6 +33,13 @@ class LoginPageView(TemplateView):
         #     return redirect("login-page")
 
 
+def logout_view(request):
+    if request.session.get('username'):
+        p = request.session['username']
+        del request.session['username']
+    return redirect('login-page', {'username': p})
+
+
 class RegistrationPageView(TemplateView):
     template_name = "register.html"
 
