@@ -3,7 +3,8 @@ Samarth, Sanjeev, Saurav
 
 # Contribution
 
-Login and Registration page -> Sanjeev
+Hoempage -> Samarth
+Login and Registration page -> Sanjeev, Samarth
 
 # Third Sem Project - Profile Page
 
