@@ -34,7 +34,7 @@
 .subheading {
     display: block;
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 600;
     color: #8a4c14;
     text-transform: uppercase;
     margin-bottom: 1.6rem;
@@ -74,8 +74,32 @@
     box-shadow: inset 0 0 0 3px #fff;
 }
 
+.link:link,
+.link:visited {
+    display: inline-block;
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor; /*it takes the current text color that is 2 lines above*/
+    padding-bottom: 2px;
+}
+
+.link:hover,
+.link:active {
+    color: #8a4c14;
+}
+
+/*helper setting classes next 3*/
+
 .margin-right-small {
     margin-right: 1.6rem !important;
+}
+
+.margin-bottom-medium {
+    margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+    text-align: center;
 }
 
 .container {
@@ -86,7 +110,7 @@
 
 .grid {
     display: grid;
-    column-gap: 6.4;
+    column-gap: 6.4rem;
     row-gap: 9.6rem;
 }
 
@@ -94,7 +118,18 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
+.grid-3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-5-cols{
+    grid-template-columns: repeat(5,1fr);
+}
+
 .grid center-vertically {
     align-items: center;
 }
 
+.strong {
+    font-weight: 500;
+}

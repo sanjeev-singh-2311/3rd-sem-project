@@ -138,11 +138,40 @@ body {
 }
 
 /***************************************************/
+/*FEATURED IN*/
+/***************************************************/
+
+.section-featured {
+    padding: 4.8rem 0;
+}
+
+.heading-featured-in {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #8a4c14;
+    letter-spacing: 0.75px;
+    font-weight: 550;
+    text-align: center;
+    margin-bottom: 2.4rem;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logos img{ /*instead of giving them a class we just descendent selector that is img*/
+    height: 6rem;
+    filter: grayscale();/*or we can use brightness (0) to make black then lower opacity*/
+}
+
+/***************************************************/
 /*HOW IT WORKS SECTION*/
 /***************************************************/
 
 .section-how-it-works {
-    padding: 9.6rem 0;
+    padding: 9.6rem;
 }
 
 .step-img-box {
@@ -205,3 +234,212 @@ body {
     background-color: #fdf2e9;
     padding: 4.8rem 0 9.6rem 0;
 }
+
+
+/*******************************************/
+/*PROFILE*/
+/******************************************/
+
+.section-profile {
+    padding: 9.6rem;
+}
+
+.profile {
+    box-shadow: 0 2.4rem 4.8rem rgba(0,0,0,0.075); /* rgba for transparency 0.075-7.5%*/
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 4.8rem 2.4rem;
+    transition: 0.4s;
+}
+
+.profile:hover{
+    transform: translate(0, -1.2rem);
+    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06); /* during transition the shadow reduces from 0.075 to 0.06*/
+}
+
+.profile-title {
+    font-size: 2.4rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 3.2rem;
+
+}
+
+.profile-content {
+    padding: 3.2rem 4.8rem 4.8rem 4.8;
+}
+
+.profile-attributes {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.profile-attribute {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.profile-img {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.profile-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    color: #e67e22;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.8rem 0.8rem 0.8rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #333;
+    background-color: #e67e22;
+    border-radius: 100px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.list-item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.list-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #e67e22;
+}
+
+.all-profiles {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/*******************************************/
+/*TESTIMONIALS*/
+/*******************************************/
+
+.section-testimonials {
+    padding: 9.6rem;
+    background-color: #fdf2e9;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4.8rem;
+}
+
+.testimonial-img {
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.testimonial-text {
+    font-size: 1.8rem;
+    line-height: 1.8;/*its actually a multiplier so no rem or px, it will be of size 1.8 times the text size*/
+    margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+    font-size: 1.6rem;
+    color: #777;
+}
+
+/*******************************************/
+/*TESTIMONIALS*/
+/*******************************************/
+
+.footer {
+    padding: 12.8rem 0;
+    border-top: 1px solid #eee;
+}
+
+.grid-footer {
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    display: block;
+    margin-bottom: 3.2rem;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    grid-area: 2.4rem;
+    gap: 2.4rem;
+}
+
+.social-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+
+}
+
+.copyright {
+    font-size: 1.4rem;
+    color: #767676;
+    line-height: 1.6;
+    margin-top: auto;
+}
+
+.footer-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 3.2rem;
+}
+
+.contacts {
+    font-style: monospace;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.address {
+    margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #767676;
+    transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+    color: #555;
+}
+
