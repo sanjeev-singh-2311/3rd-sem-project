@@ -5,6 +5,7 @@
 }
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -20,36 +21,30 @@ body {
 /**************************************************/
 
 .header {
-	display: flex;
-	position : absolute;
-	font-size : 12px;
-	top : 0;
-	right : 0;
-	left : 0;
-	justify-content: space-between;
-	align-items: center;
-	z-index : 20;
-	background-color: #fdf2e9;
-	height: max-content; /* we fix the height so as to make the navigation sticky i.e stays even when controlled */
-	padding: 0 4.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdf2e9;
+    height: 9.6rem; /* we fix the height so as to make the navigation sticky i.e stays even when controlled */
+    padding: 0 4.8rem;
 }
 
 .header-register {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: #fdf2e9;
-	height: 9.6rem; /* we fix the height so as to make the navigation sticky i.e stays even when controlled */
-	padding: 0 4.8rem;
-	z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdf2e9;
+    height: 9.6rem; /* we fix the height so as to make the navigation sticky i.e stays even when controlled */
+    padding: 0 4.8rem;
+    z-index: 5;
 }
 
 .logo {
-	height: 2.6rem;
+    height: 2.6rem;
 }
 
 /***************************************************/
@@ -57,27 +52,27 @@ body {
 /***************************************************/
 
 .main-nav-list {
-	list-style: none;
-	display: flex;
-	gap: 3.2rem;
+    list-style: none;
+    display: flex;
+    gap: 3.2rem;
 }
 
 .main-nav-link:link,
 .main-nav-link:visited {
-	display: inline-block;
-	text-decoration: none;
-	color: #fff;
-	font-weight: 550;
-	font-size: 1.8rem;
-	transition: all 0.4s;
-	background-color: #e67e22;
-	border-radius: 9px;
-	padding: 0.2rem 2.4rem;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 550;
+    font-size: 1.8rem;
+    transition: all 0.4s;
+    background-color: #e67e22;
+    border-radius: 9px;
+    padding: 1.2rem 2.4rem;
 }
 
 .main-nav-link:hover,
 .main-nav-link:active {
-	background-color: #8a4c14;
+    background-color: #8a4c14;
 }
 
 /***************************************************/
@@ -85,12 +80,12 @@ body {
 /***************************************************/
 
 .hero {
-	max-width: 130rem;
-	margin: 0 auto;
-	padding: 0 3.2rem;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 9.6rem;
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9.6rem;
     align-items: center;
 }
 
@@ -144,11 +139,40 @@ body {
 }
 
 /***************************************************/
+/*FEATURED IN*/
+/***************************************************/
+
+.section-featured {
+    padding: 4.8rem 0;
+}
+
+.heading-featured-in {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #8a4c14;
+    letter-spacing: 0.75px;
+    font-weight: 550;
+    text-align: center;
+    margin-bottom: 2.4rem;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logos img{ /*instead of giving them a class we just descendent selector that is img*/
+    height: 6rem;
+    filter: grayscale();/*or we can use brightness (0) to make black then lower opacity*/
+}
+
+/***************************************************/
 /*HOW IT WORKS SECTION*/
 /***************************************************/
 
 .section-how-it-works {
-    padding: 9.6rem 0;
+    padding: 9.6rem;
 }
 
 .step-img-box {
@@ -211,3 +235,213 @@ body {
     background-color: #fdf2e9;
     padding: 4.8rem 0 9.6rem 0;
 }
+
+
+/*******************************************/
+/*PROFILE*/
+/******************************************/
+
+.section-profile {
+    padding: 9.6rem;
+}
+
+.profile {
+    box-shadow: 0 2.4rem 4.8rem rgba(0,0,0,0.075); /* rgba for transparency 0.075-7.5%*/
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 4.8rem 2.4rem;
+    transition: 0.4s;
+}
+
+.profile:hover{
+    transform: translate(0, -1.2rem);
+    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06); /* during transition the shadow reduces from 0.075 to 0.06*/
+}
+
+.profile-title {
+    font-size: 2.4rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 3.2rem;
+    color: #;
+
+}
+
+.profile-content {
+    padding: 3.2rem 4.8rem 4.8rem 4.8;
+}
+
+.profile-attributes {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.profile-attribute {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.profile-img {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.profile-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    color: #e67e22;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.8rem 0.8rem 0.8rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #333;
+    background-color: #e67e22;
+    border-radius: 100px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.list-item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.list-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #e67e22;
+}
+
+.all-profiles {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/*******************************************/
+/*TESTIMONIALS*/
+/*******************************************/
+
+.section-testimonials {
+    padding: 9.6rem;
+    background-color: #fdf2e9;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4.8rem;
+}
+
+.testimonial-img {
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.testimonial-text {
+    font-size: 1.8rem;
+    line-height: 1.8;/*its actually a multiplier so no rem or px, it will be of size 1.8 times the text size*/
+    margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+    font-size: 1.6rem;
+    color: #777;
+}
+
+/*******************************************/
+/*TESTIMONIALS*/
+/*******************************************/
+
+.footer {
+    padding: 12.8rem 0;
+    border-top: 1px solid #eee;
+}
+
+.grid-footer {
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    display: block;
+    margin-bottom: 3.2rem;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    grid-area: 2.4rem;
+    gap: 2.4rem;
+}
+
+.social-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+
+}
+
+.copyright {
+    font-size: 1.4rem;
+    color: #767676;
+    line-height: 1.6;
+    margin-top: auto;
+}
+
+.footer-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 3.2rem;
+}
+
+.contacts {
+    font-style: monospace;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.address {
+    margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #767676;
+    transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+    color: #555;
+}
+

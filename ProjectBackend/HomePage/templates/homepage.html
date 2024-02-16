@@ -5,8 +5,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="style.css"/>
-		<link rel="stylesheet" href="general.css"/>
+		<link rel="stylesheet" href={% static 'css/style.css' %}/>
+		<link rel="stylesheet" href={% static 'css/general.css' %}/>
 		<title>User Login</title>
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script>
@@ -63,17 +63,17 @@
 							</a>
 							<div class="investments">
 								<div class="entreprenuer-imgs">
-									<img src="images/customers/customer-1.jpg"
+									<img src={% static "images/customers/customer-1.jpg" %}
 										 alt="Customer photo" />
-									<img src="images/customers/customer-2.jpg"
+									<img src={% static "images/customers/customer-2.jpg" %}
 										 alt="Customer photo" />
-									<img src="images/customers/customer-3.jpg"
+									<img src={% static "images/customers/customer-3.jpg" %}
 										 alt="Customer photo" />
-									<img src="images/customers/customer-4.jpg"
+									<img src={% static "images/customers/customer-4.jpg" %}
 										 alt="Customer photo" />
-									<img src="images/customers/customer-5.jpg"
+									<img src={% static "images/customers/customer-5.jpg" %}
 										 alt="Customer photo" />
-									<img src="images/customers/customer-6.jpg"
+									<img src={% static "images/customers/customer-6.jpg" %}
 										 alt="Customer photo" />
 								</div>
 								<p class="customer-text"><span>10,000+</span> start-ups invested so far!</p>
@@ -90,12 +90,12 @@
 					<div class="container">
 						<h2 class="heading-featured-in">Assiciate your proile with</h2>
 						<div class="logos">
-							<img src="images/logos/github.png" alt="github logo"/>
-							<img src="images/logos/intershala.jpg" alt="intershala logo"/>
-							<img src="images/logos/upwork.png" alt="upwork logo"/>
-							<img src="images/logos/linkedin.png" alt="linkedin logo"/>
-							<img src="images/logos/flexjobs.png" alt="flexjobs logo"/>
-							<img src="images/logos/mentorcloud.png" alt="mentorcloud logo"/>
+							<img src={% static "images/logos/github.png" %} alt="github logo"/>
+							<img src={% static "images/logos/intershala.jpg" %} alt="intershala logo"/>
+							<img src={% static "images/logos/upwork.png" %} alt="upwork logo"/>
+							<img src={% static "images/logos/linkedin.png" %} alt="linkedin logo"/>
+							<img src={% static "images/logos/flexjobs.png" %} alt="flexjobs logo"/>
+							<img src={% static "images/logos/mentorcloud.png" %} alt="mentorcloud logo"/>
 						</div>
 					</div>
 				</section>
@@ -121,12 +121,12 @@
 							</p>
 						</div>
 						<div class="step-img-box">
-							<img src="images/how it works/app-screen-1.png" class="step-img" 
+							<img src={% static "images/how it works/app-screen-1.png" %} class="step-img" 
 																			alt="photo of how it works 1" />
 						</div>
 						<!-- Step 2-->
 						<div class="step-img-box">
-							<img src="images/how it works/app-screen-2.png" class="step-img" 
+							<img src={% static "images/how it works/app-screen-2.png" %} class="step-img" 
 																			alt="photo of how it works 2" />
 						</div>
 						<div class="step-text-box">
@@ -149,7 +149,7 @@
 							</p>
 						</div>
 						<div class="step-img-box">
-							<img src="images/how it works/app-screen-3.png" class="step-img" 
+							<img src={% static "images/how it works/app-screen-3.png" %} class="step-img" 
 																			alt="photo of how it works 3" />
 						</div>
 					</div>
@@ -167,7 +167,7 @@
 
 					<div class="container grid grid-3-cols margin-bottom-medium">
 						<div class="profile">
-							<img src="images/profile/profile1.jpg" class="profile-img" alt="cat profile phoro 1"/>
+							<img src={% static "images/profile/profile1.jpg" %} class="profile-img" alt="cat profile phoro 1"/>
 							<div class="profile-content">
 								<div class="profile-tags">
 									<span class="tag">Entreprenuer</span>
@@ -181,7 +181,7 @@
 							</div>
 						</div>
 						<div class="profile">
-							<img src="images/profile/profile2.jpg" class="profile-img" alt="cat profile photo 2"/>
+							<img src={% static "images/profile/profile2.jpg" %} class="profile-img" alt="cat profile photo 2"/>
 							<div class="profile-content">
 								<div class="profile-tags">
 									<span class="tag">Entreprenuer</span>
@@ -230,7 +230,7 @@
 
 						<div class="testimonials">
 							<figure class="testimonial">
-								<img class="testimonial-img" alt="customer photo" src="images/customers/customer-1.jpg"/>
+								<img class="testimonial-img" alt="customer photo" src={% static "images/customers/customer-1.jpg" %}/>
 								<blockquote class="testimonial-text">
 									Thanks to this platform, I've gained invaluable insights into the world of business and investing. It's helped me make informed decisions and achieve my financial goals.
 								</blockquote>
@@ -238,7 +238,7 @@
 							</figure>
 
 							<figure class="testimonial">
-								<img class="testimonial-img" alt="customer photo" src="images/customers/customer-2.jpg"/>
+								<img class="testimonial-img" alt="customer photo" src={% static "images/customers/customer-2.jpg" %}/>
 								<blockquote class="testimonial-text">
 									I've been a member of this website for years, and it's been instrumental in my success as an investor. The resources, tools, and community support are unmatched.
 								</blockquote>
@@ -246,7 +246,7 @@
 							</figure>
 
 							<figure class="testimonial">
-								<img class="testimonial-img" alt="customer photo" src="images/customers/customer-3.jpg"/>
+								<img class="testimonial-img" alt="customer photo" src={% static "images/customers/customer-3.jpg" %}/>
 								<blockquote class="testimonial-text">
 									I highly recommend this website to anyone looking to grow their wealth and navigate the complexities of the business world. It's a game-changer!
 								</blockquote>
@@ -254,7 +254,7 @@
 							</figure>
 
 							<figure class="testimonial">
-								<img class="testimonial-img" alt="customer photo" src="images/customers/customer-4.jpg"/>
+								<img class="testimonial-img" alt="customer photo" src={% static "images/customers/customer-4.jpg" %}/>
 								<blockquote class="testimonial-text">
 									Being part of this community has been a game-changer for me. The educational content, market analysis, and expert advice have empowered me to take control of my financial future.
 								</blockquote>
@@ -262,7 +262,7 @@
 							</figure>
 
 							<figure class="testimonial">
-								<img class="testimonial-img" alt="customer photo" src="images/customers/customer-5.jpg"/>
+								<img class="testimonial-img" alt="customer photo" src={% static "images/customers/customer-5.jpg" %}/>
 								<blockquote class="testimonial-text">
 									This website has been my go-to resource for everything related to business and investing. From beginner guides to advanced strategies, it has everything I need to thrive in the market.
 								</blockquote>
@@ -270,7 +270,7 @@
 							</figure>
 
 							<figure class="testimonial">
-								<img class="testimonial-img" alt="customer photo" src="images/customers/customer-6.jpg"/>
+								<img class="testimonial-img" alt="customer photo" src={% static "images/customers/customer-6.jpg" %}/>
 								<blockquote class="testimonial-text">
 									I stumbled upon this website while searching for investment advice, and I'm so glad I did! The team here has curated top-notch content that has helped me make informed decisions and avoid common pitfalls.
 								</blockquote>
@@ -287,7 +287,7 @@
 				<div class="container grid grid-footer">
 					<div class="logo-col">
 						<a href="#" class="footer-logo">
-							<img class="logo" alt="abhyuday logo" src="images/logos/main-logo.png"/>
+							<img class="logo" alt="abhyuday logo" src={% static "images/logos/main-logo.png" %}/>
 						</a>
 						<ul class="social-links">
 							<li><a class="footer-link" href="#"><ion-icon class="social-icon" name="logo-instagram"></ion-icon></a></li>
